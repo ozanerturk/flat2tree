@@ -104,5 +104,9 @@ console.log(node)
 let path = tree.getPath(node)       // path is the direct way of id array to root node 
 console.log(path)               
 
+tree.traverse((node) =>{            // Traverse tree Postorder 
+    console.log(`${node.id} ${node.data}`)
+})
+
 console.log(tree.toJSON())          // tree as json 
 ```
