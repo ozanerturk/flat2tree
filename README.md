@@ -36,7 +36,7 @@ At this point, it is achivable to convert flat node array to tree model. For thi
 
 
 
-```javascript
+```JSON
 [
     {
         "id": "node1",
@@ -84,4 +84,25 @@ At this point, it is achivable to convert flat node array to tree model. For thi
         "data": "data"
     }
 ]
+```
+
+```javascript
+var {Tree} = require('./flat2tree')
+let config =  { // this is default config
+    dataProperty: 'data',
+    idProperty: 'id',
+    parentidProperty: 'parentid'
+}
+var tree = new Tree()
+
+tree.parse(arr,config)
+console.log(tree.data)              // Simple tree model which can be used for treeUI libraries.
+
+let node = tree.getNode('node4')    // Directly access to node by unique Id
+console.log(node)
+
+let path = tree.getPath(node)       // path is the direct way of id array to root node 
+console.log(path)               
+
+console.log(tree.toJSON())          // tree as json 
 ```
