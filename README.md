@@ -24,6 +24,8 @@ keeping these structures flat in the database enables you to perform query and u
 But users want to see the tree like a tree. Most of the frontend libraries provides tree UI expecting tree modeled data to work. 
 At this point, it is achivable to convert flat node array to tree model. For this we just need simple recursive method to parse flat node array to tree model.
 
+Simple algorith can be found in [Algorith.md](./Algorithm.md)
+
 |id      | parentid  |  data|
 |-------|------------|--------|
 | node1	| null	    | "data"|
